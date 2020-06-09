@@ -1,6 +1,7 @@
 #include <string>
 
-#include "/usr/local/google/home/kabeerseth/github/absl/strings/str_join.h"
+#include "../absl/strings/str_join.h"
+#include "../absl/strings/str_split.h"
 
 int LLVMFuzzerTestOneInput(const uint8_t* data, size_t size) {
 	cout << "test" << endl;
