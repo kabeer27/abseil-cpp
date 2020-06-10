@@ -22,7 +22,7 @@ extern "C" int LLVMFuzzerTestOneInput(const uint8_t* data, size_t size) {
 	absl::Base64Unescape(encoded, &decoded);
 
 	absl::WebSafeBase64Escape(str, &encoded);
-	absl::WebSafeBase64UnEscape(encoded, &decoded);
+	absl::WebSafeBase64Unescape(encoded, &decoded);
 
 	std::string hex_result, bytes_result;
 	hex_result = absl::BytesToHexString(str);
