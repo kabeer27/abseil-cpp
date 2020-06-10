@@ -11,11 +11,11 @@ extern "C" int LLVMFuzzerTestOneInput(const uint8_t* data, size_t size) {
 	escaped = absl::CEscape(str);
 	absl::CUnescape(escaped, &unescaped);
 	
-	escaped = absl::CUtf8SafeEscape(str);
+	escaped = absl::Utf8SafeEscape(str);
 	absl::CUnescape(escaped, &unescaped);
 	
 	escaped = absl::Utf8SafeCHexEscape(str);
-	absl::Unescape(escaped, &unescaped);
+	absl::CUnescape(escaped, &unescaped);
 	
 	std::string encoded, decoded;
 	absl::Base64Escape(str, &encoded);
