@@ -11,7 +11,7 @@ extern "C" int LLVMFuzzerTestOneInput(const uint8_t* data, size_t size) {
 	escaped = absl::CEscape(str);
 	absl::CUnescape(escaped, &unescaped);
 	
-	escaped = absl::Utf8SafeEscape(str);
+	escaped = absl::Utf8SafeCEscape(str);
 	absl::CUnescape(escaped, &unescaped);
 	
 	escaped = absl::Utf8SafeCHexEscape(str);
